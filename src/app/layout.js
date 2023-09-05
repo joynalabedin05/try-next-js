@@ -1,3 +1,6 @@
+
+
+import Link from 'next/link';
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -9,14 +12,13 @@ export const metadata = {
 }
 
 const RootLayout = ({ children })=> {
+  
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <a href='#'>home</a>
-        </nav>
+       
         {children}
-        <footer>footer</footer>
+        
         </body>
     </html>
   )

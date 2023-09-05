@@ -1,14 +1,13 @@
 import React from 'react';
+import Sidebar from './Sidebar';
 export const metadata = {
     title: 'Dashboard || Next App',
     description: 'next app',
   };
 const DashboardLayout = ({children}) => {
     return (
-        <div>
-            <div>
-                sidebar
-            </div>
+        <div className='flex container mx-auto'>
+            <Sidebar></Sidebar>
             {children}
         </div>
     );

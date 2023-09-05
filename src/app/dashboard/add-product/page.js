@@ -6,7 +6,8 @@ export const metadata = {
 const AddProductPage = () => {
     return (
         <div>
-            AddProductPage        </div>
+            AddProductPage
+        </div>
     );
 };
 
