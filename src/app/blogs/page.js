@@ -1,4 +1,6 @@
+// "use client"
 import Link from 'next/link';
+// import { useRouter } from 'next/navigation';
 import React from 'react';
 export const metadata = {
     title: 'Blogs || Next App',
@@ -28,15 +30,23 @@ export const metadata = {
     },
   ]
 const BlogsPage = () => {
+    // const router = useRouter();
     return (
         <div className='container mx-auto'>
            {
-            blogs.map(({id, year, title})=><Link className='block border border-blue-500 p-2 m-2' href={{
+            blogs.map(({id, year, title})=>
+            <Link className='block border border-blue-500 p-2 m-2'
+             href={{
                 pathname: `/blogs/${year}/${id}`,
                 query: {
                     title: title,
                 }
-            }} key={id}>{title}</Link>)
+            }} 
+            // onClick={()=>{router.push(`/blogs/${year}/${id}?title=${title}`)}}
+            key={id}
+            >
+                {title}
+            </Link>)
            }
         </div>
     );

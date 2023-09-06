@@ -1,5 +1,7 @@
+"use client"
 import Link from 'next/link';
 import React from 'react';
+import NavLink from '../components/NavLink';
 
 const navLinks = [
     {
@@ -27,7 +29,7 @@ const Sidebar = () => {
             <ul className=' mx-2 my-4'>
                 {
                      navLinks.map(({path, title})=><li className='mx-2' key={path}>
-                     <Link href={path}>{title}</Link>
+                     <NavLink exact activeClassName="text-blue-500" href={path}>{title}</NavLink>
                  </li>)
                 }
             </ul>

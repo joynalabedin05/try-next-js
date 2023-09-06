@@ -2,9 +2,12 @@
 
 import Link from 'next/link';
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ subsets: ['latin'],
+ weight:['300', '100', '500'],
+ variable: '--font-roboto',
+})
 
 export const metadata = {
   title: 'Next App',
@@ -15,7 +18,7 @@ const RootLayout = ({ children })=> {
   
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${roboto.variable} font-roboto` }>
        
         {children}
         
